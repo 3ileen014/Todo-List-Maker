@@ -23,6 +23,7 @@ public:
 	void addTask(Task newTask);
 	void newCategory(string category);
 	void deleteCategory(string category);
+	void addToCompleted();
 };
 
 #endif

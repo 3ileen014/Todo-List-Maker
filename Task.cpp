@@ -4,11 +4,10 @@
 
 using namespace std;
 
-Task::Task(const string& desc, const string& deadline, const string& category, int id) :
+Task::Task(const string& desc, const string& deadline, const string& category) :
 	desc(desc),
 	deadline(deadline),
-	category(category),
-	id(id)
+	category(category)
 {
 	fin = false;
 }
@@ -23,10 +22,6 @@ string Task::getDeadline() {
 
 string Task::getCategory() {
 	return category;
-}
-
-int Task::getID() {
-	return id;
 }
 
 void Task::editDesc(const string& newDesc) {
