@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Task.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TodoList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Task.h" />
+    <ClInclude Include="TodoList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
