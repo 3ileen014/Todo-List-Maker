@@ -16,18 +16,17 @@ int main()
 	cout << "Please name your list: ";
 	getline(cin, name);
 	TodoList list = TodoList(name);
-	cout << endl << endl;
+	cout << endl;
 	cout << "Go ahead and take a look at our menu." << endl << endl;
 
 	menu: {
 		do {
-			cout << "-------------------------" << endl << endl;
+			cout << "=========================" << endl << endl;
 			cout << "Menu: " << endl;
-			cout << "1. Add Task" << endl;
+			cout << "1. Show List" << endl;
 			cout << "2. Add Category" << endl;
-			cout << "3. Show List" << endl;
-			cout << "4. End Program" << endl << endl;
-			cout << "-------------------------" << endl << endl;
+
+			cout << endl << "=========================" << endl << endl;
 
 			cout << "Please input the number of the choice you would like to make: ";
 			cin >> choice;
@@ -37,54 +36,26 @@ int main()
 
 			switch (choice) {
 			case 1: {
-				string desc;
-				string date;
-				string category;
-				char c;
-
-				cout << "You have chosen to add a task." << endl;
-				cout << "Input the description of your task: ";
-				getline(cin, name);
-
-				cout << "Input the deadline of your task in the form of MM/DD/YYY: ";
-				cin >> date;
-				cin.ignore();
-
-			categorized: {
-				cout << "Should this task be categorized? (Y/N): ";
-				cin >> c;
-				cin.ignore();
-
-				if (toupper(c) == 'Y') {
-					cout << "Input the category that this task should be in: ";
-					getline(cin, category);
-					cout << endl;
-				}
-				else if (toupper(c) == 'N') {
-					cout << "Task will be uncategorized." << endl;
-					category = "U";
+				if ((list.getCategories()).empty()) {
+					cout << "Your list is currently empty." << endl << endl;
 				}
 				else {
-					cout << "ERROR: Please input either Y or N." << endl;
-					goto categorized;
+					cout << "Here is your current list:" << endl << endl;
+					list.showList();
 				}
-				}
-
-			Task newTask = Task(desc, date, category);
-			list.addTask(newTask);
-			cout << endl;
-			break;
+				
+				break;
 			}
 			case 2: {
 				string name;
 
-				cout << "Input the name of the new category: ";
+				cout << "You have chosen to create a new category." << endl;
+				cout << "Please name the new category: ";
 				getline(cin, name);
-				cout << endl;
-
-				list.newCategory(name);
-
-				cout << endl;
+				Category cat = Category(name);
+				list.addCategory(cat);
+				cout << endl << "You have successfuly added " << name << " to your list." << endl << endl;
+				
 				break;
 			}
 			}

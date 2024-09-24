@@ -24,12 +24,18 @@
     <ClCompile Include="TodoList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Category.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Task.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TodoList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Category.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

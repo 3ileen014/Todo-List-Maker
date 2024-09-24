@@ -1,9 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
-#include <map>
-#include <set>
-#include "Task.h"
+#include <cctype>
+#include "Category.h"
 #ifndef TODOLIST_H
 #define TODOLIST_H
 
@@ -11,19 +10,15 @@ using namespace std;
 
 class TodoList {
 private:
-	map<string, vector<Task>> list;
-	vector<Task> completed;
-	set<string> categories;
 	string name;
+	vector<Category> categories;
 public:
 	TodoList(string name);
 	~TodoList() {};
 	string getName();
+	vector<Category> getCategories();
 	void showList();
-	void addTask(Task newTask);
-	void newCategory(string category);
-	void deleteCategory(string category);
-	void addToCompleted();
+	void addCategory(Category newCat);
 };
 
 #endif
