@@ -11,7 +11,7 @@ private:
 	string deadline;
 	bool fin;
 public:
-	Task(const string& desc, const string& deadline, const string& category);
+	Task(const string& desc, const string& deadline);
 	~Task() {};
 	string getDesc();
 	string getDeadline();

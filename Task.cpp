@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Task::Task(const string& desc, const string& deadline, const string& category) :
+Task::Task(const string& desc, const string& deadline) :
 	desc(desc),
 	deadline(deadline)
 {

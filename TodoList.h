@@ -16,7 +16,8 @@ public:
 	TodoList(string name);
 	~TodoList() {};
 	string getName();
-	vector<Category> getCategories();
+	vector<Category>& getCategories();
+	void replace(vector<Category> newCat);
 	void showList();
 	void addCategory(Category newCat);
 };

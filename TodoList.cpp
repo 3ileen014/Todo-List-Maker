@@ -13,8 +13,12 @@ string TodoList::getName() {
 	return name;
 }
 
-vector<Category> TodoList::getCategories() {
+vector<Category>& TodoList::getCategories() {
 	return categories;
+}
+
+void TodoList::replace(vector<Category> newCat) {
+	categories = newCat;
 }
 
 void TodoList::showList() {

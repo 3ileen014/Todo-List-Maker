@@ -9,10 +9,12 @@ class Category {
 private:
 	string name;
 	vector<Task> tasks;
+	int size;
 public:
 	Category(const string& name);
 	Category(const string& name, Task task);
 	~Category() {};
+	string getName();
 	void addTask(Task task);
 	void editCategory(string newName);
 	void showTasks();
