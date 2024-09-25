@@ -17,10 +17,6 @@ vector<Category>& TodoList::getCategories() {
 	return categories;
 }
 
-void TodoList::replace(vector<Category> newCat) {
-	categories = newCat;
-}
-
 void TodoList::showList() {
 	cout << "-------------------------" << endl << endl;
 	cout << name << endl << endl;

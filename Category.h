@@ -18,6 +18,7 @@ public:
 	void addTask(Task task);
 	void editCategory(string newName);
 	void showTasks();
+	vector<Task>& getTasks();
 };
 
 #endif

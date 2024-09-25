@@ -36,3 +36,6 @@ void Category::showTasks() {
 	cout << endl;
 }
 
+vector<Task>& Category::getTasks() {
+	return tasks;
+}
