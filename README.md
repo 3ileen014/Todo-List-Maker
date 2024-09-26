@@ -3,7 +3,6 @@
 This is a simple To-Do List application developed in C++. 
 The program allows users to create and name a todolist, which they can add to and customize to their liking.
 
-<break>
 
 It is user-friendly and provides an organized menu interface with the following choices: 
 
@@ -20,6 +19,5 @@ It is user-friendly and provides an organized menu interface with the following 
   <li>End Program</li>
 </ol>
 
-<break>
 
 (Made by Eileen Kang in VSCode)
