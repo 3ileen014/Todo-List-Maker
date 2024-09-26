@@ -19,6 +19,8 @@ public:
 	vector<Category>& getCategories();
 	void showList();
 	void addCategory(Category newCat);
+	void deleteCategory(int index);
+	void clearList();
 };
 
 #endif

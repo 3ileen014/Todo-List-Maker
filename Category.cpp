@@ -24,6 +24,11 @@ void Category::addTask(Task task) {
 	size++;
 }
 
+void Category::deleteTask(int index) {
+	tasks.erase(tasks.begin() + index);
+	size--;
+}
+
 void Category::editCategory(string newName) {
 	name = newName;
 }

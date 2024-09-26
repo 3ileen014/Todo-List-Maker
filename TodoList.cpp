@@ -29,3 +29,11 @@ void TodoList::showList() {
 void TodoList::addCategory(Category newCat) {
 	categories.push_back(newCat);
 }
+
+void TodoList::deleteCategory(int index) {
+	categories.erase(categories.begin() + index);
+}
+
+void TodoList::clearList() {
+	categories.clear();
+}

@@ -16,6 +16,7 @@ public:
 	~Category() {};
 	string getName();
 	void addTask(Task task);
+	void deleteTask(int index);
 	void editCategory(string newName);
 	void showTasks();
 	vector<Task>& getTasks();
